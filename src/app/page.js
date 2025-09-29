@@ -1,11 +1,13 @@
-"use client";
+use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { FaLinkedin, FaBehance, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
+
 export default function Page() {
+   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white">
       {/* NAVBAR */}
@@ -19,36 +21,63 @@ export default function Page() {
             Nadhif.
           </a>
 
-          {/* Navigation */}
-          <nav>
-            <ul className="flex gap-8 items-center text-gray-300">
-              <li>
-                <a
-                  href="#projects"
-                  className="hover:text-white transition-colors"
-                >
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#experience"
-                  className="hover:text-white transition-colors"
-                >
-                  Work Experiences
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="hover:text-white transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex gap-8 items-center text-gray-300">
+            <a
+              href="#projects"
+              className="hover:text-green-400 transition-colors"
+            >
+              Projects
+            </a>
+            <a
+              href="#experience"
+              className="hover:text-green-400 transition-colors"
+            >
+              Experience
+            </a>
+            <a
+              href="#contact"
+              className="hover:text-green-400 transition-colors"
+            >
+              Contact
+            </a>
           </nav>
+
+          {/* Hamburger button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-2xl text-white focus:outline-none"
+          >
+            {isOpen ? "✖" : "☰"}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden bg-[#0f172a] flex flex-col items-center py-6 space-y-6">
+            <a
+              href="#projects"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-green-400"
+            >
+              Projects
+            </a>
+            <a
+              href="#experience"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-green-400"
+            >
+              Experience
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setIsOpen(false)}
+              className="hover:text-green-400"
+            >
+              Contact
+            </a>
+          </div>
+        )}
       </header>
       {/* HERO SECTION */}
       <section
@@ -267,6 +296,13 @@ export default function Page() {
           from my design and development roles.
         </p>
         <div className="max-w-3xl mx-auto space-y-6">
+          <div className="flex justify-between border-b border-gray-800 pb-4">
+            <div>
+              <h3 className="font-semibold">UI/UX Designer Internship</h3>
+              <p className="text-gray-400">Pelihara.co</p>
+            </div>
+            <span className="text-gray-400">Sep 2025 - Present</span>
+          </div>  
           <div className="flex justify-between border-b border-gray-800 pb-4">
             <div>
               <h3 className="font-semibold">Freelance Designer</h3>
