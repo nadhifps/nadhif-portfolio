@@ -98,7 +98,7 @@ export default function Page() {
 
         {/* Subtitle */}
         <p className="mt-6 max-w-2xl text-gray-400">
-          A UI/UX Designer & Software Developer from Indonesia with more than 1
+          A UI/UX Designer & Software Developer from Indonesia with more than 2
           year of experience designing websites and mobile interface.
         </p>
 
