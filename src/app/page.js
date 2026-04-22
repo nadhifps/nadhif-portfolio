@@ -299,7 +299,7 @@ export default function Page() {
         <div className="max-w-3xl mx-auto space-y-6">
           <div className="flex justify-between border-b border-gray-800 pb-4">
             <div>
-              <h3 className="font-semibold">UI/UX Designer Internship</h3>
+              <h3 className="font-semibold">UI/UX Designer</h3>
               <p className="text-gray-400">Pelihara.co</p>
             </div>
             <span className="text-gray-400">Sep 2025 - Present</span>
