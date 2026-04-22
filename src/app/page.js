@@ -300,7 +300,7 @@ export default function Page() {
           <div className="flex justify-between border-b border-gray-800 pb-4">
             <div>
               <h3 className="font-semibold">UI/UX Designer</h3>
-              <p className="text-gray-400">Pelihara.co</p>
+              <p className="text-gray-400">Pelihara Hewan Bahagia</p>
             </div>
             <span className="text-gray-400">Sep 2025 - Present</span>
           </div>
